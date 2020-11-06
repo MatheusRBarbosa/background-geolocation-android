@@ -416,11 +416,11 @@ public class BackgroundGeolocationFacade {
         return hasPermissions(getContext(), PERMISSIONS);
     }
 
-    public static String[] bgLocationPermission () {
+    public String[] bgLocationPermission () {
         return BG_LOCATION_PERMISSION;
     }
 
-    public static boolean hasBackgroundLocationPermission() {
+    public boolean hasBackgroundLocationPermission() {
         return hasPermissions(getContext(), BG_LOCATION_PERMISSION);
     }
 
