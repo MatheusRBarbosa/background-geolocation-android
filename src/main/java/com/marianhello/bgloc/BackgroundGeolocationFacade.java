@@ -413,6 +413,8 @@ public class BackgroundGeolocationFacade {
     }
 
     public boolean hasPermissions() {
+        boolean has = hasPermissions(getContext(), BG_LOCATION_PERMISSION);
+        logger.info(">>> HAS PERMISSION BG_LOCATION_PERMISSION? ", has);
         return hasPermissions(getContext(), PERMISSIONS);
     }
 
