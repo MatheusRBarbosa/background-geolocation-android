@@ -54,8 +54,11 @@ public class BackgroundGeolocationFacade {
 
     public static final String[] PERMISSIONS = {
             Manifest.permission.ACCESS_COARSE_LOCATION,
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_BACKGROUND_LOCATION
+            Manifest.permission.ACCESS_FINE_LOCATION
+    };
+
+    public static final String[] BG_LOCATION_PERMISSION = {
+        Manifest.permission.ACCESS_BACKGROUND_LOCATION
     };
 
     private boolean mServiceBroadcastReceiverRegistered = false;
@@ -414,7 +417,7 @@ public class BackgroundGeolocationFacade {
     }
 
     public boolean hasBackgroundLocationPermission() {
-        return hasPermissions(getContext(), Manifest.permission.ACCESS_BACKGROUND_LOCATION);
+        return hasPermissions(getContext(), BG_LOCATION_PERMISSION);
     }
 
     public boolean locationServicesEnabled() throws PluginException {
